@@ -9,10 +9,10 @@ const AddProduct = () => {
   const navigate = useNavigate();
 
   const [name, setName] = useState();
-  const [price, setPrice] = useState();
-  const [discountRate, setDiscountRate] = useState();
+  const [price, setPrice] = useState(0);
+  const [discountRate, setDiscountRate] = useState(0);
   const [description, setDescription] = useState("");
-  const [stockQty, setStockQty] = useState();
+  const [stockQty, setStockQty] = useState(0);
   const [categories, setCategories] = useState();
   const [category, setCategory] = useState();
 
@@ -130,6 +130,7 @@ const AddProduct = () => {
                 placeholder="Nhập tên sản phẩm"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                required
               />
             </div>
 
@@ -154,6 +155,7 @@ const AddProduct = () => {
                     className="form-control"
                     value={stockQty}
                     onChange={(e) => setStockQty(parseInt(e.target.value))}
+                    required
                   />
                 </div>
               </div>
@@ -182,6 +184,7 @@ const AddProduct = () => {
                     id="discount"
                     value={discountRate}
                     onChange={(e) => setDiscountRate(parseInt(e.target.value))}
+                    required
                   />
                 </div>
               </div>
@@ -210,7 +213,7 @@ const AddProduct = () => {
               <div className="col-6">
                 <div className="form-group">
                   <label htmlFor="category">Danh mục sản phẩm</label>
-                  <select name="category" id="category" onChange={(e) => setCategory(e.target.value)}>
+                  <select name="category" id="category" onChange={(e) => setCategory(e.target.value)} required>
                     <option disabled selected>-- Chọn danh mục --</option>
                     {categories?.map(category => (
                       <option value={`${category.id}&${category.name}`}>{category.name}</option>
