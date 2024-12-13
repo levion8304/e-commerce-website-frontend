@@ -14,8 +14,8 @@ function HeaderAdmin() {
     }).then((res) => {
       if (res.isConfirmed) {
         localStorage.removeItem("token"); 
-        window.location.reload();
         navigate("/auth/login");
+        window.location.reload();
       }
     });
   };
