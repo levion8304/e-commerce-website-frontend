@@ -40,8 +40,8 @@ function Navbar() {
           style={{ color: "red", fontWeight: "bold" }}
           onClick={() => {
             localStorage.clear();
-            window.location.reload();
             navigate("/auth/login");
+            window.location.reload();
           }}
         >
           Đăng xuất
