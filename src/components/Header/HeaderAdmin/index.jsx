@@ -1,8 +1,10 @@
 import { memo } from "react";
 import "./HeaderAdmin.scss";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 function HeaderAdmin() {
+  const navigate = useNavigate();
   const handleLogout = () => {
     Swal.fire({
       icon: "warning",
@@ -13,6 +15,7 @@ function HeaderAdmin() {
       if (res.isConfirmed) {
         localStorage.removeItem("token"); 
         window.location.reload();
+        navigate("/auth/login");
       }
     });
   };
