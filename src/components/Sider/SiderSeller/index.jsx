@@ -46,6 +46,7 @@ function SiderSeller() {
             localStorage.removeItem("token");
             localStorage.removeItem("role");
             window.location.reload();
+            navigate("/auth/login");
           }
         });
 
