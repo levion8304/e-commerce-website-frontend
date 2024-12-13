@@ -108,7 +108,7 @@ const ManageProducts = () => {
       key: "price",
       render: (price) => (
         <>
-          {price.toLocaleString()}
+          {price?.toLocaleString()}
           <sup>đ</sup>
         </>
       ),
