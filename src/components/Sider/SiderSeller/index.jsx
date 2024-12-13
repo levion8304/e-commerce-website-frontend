@@ -45,8 +45,8 @@ function SiderSeller() {
           if (res.isConfirmed) {
             localStorage.removeItem("token");
             localStorage.removeItem("role");
-            window.location.reload();
             navigate("/auth/login");
+            window.location.reload(); 
           }
         });
 
