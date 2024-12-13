@@ -155,7 +155,7 @@ function UserInfo() {
       input: "tel",
       inputAttributes: {
         maxlength: "10",
-        pattern: "[0-9]{10}",
+        pattern: "0[3|5|7|8|9]{1}[0-9]{8}",
         required: true,
         placeholder: "Cần nhập 10 chữ số",
       },
