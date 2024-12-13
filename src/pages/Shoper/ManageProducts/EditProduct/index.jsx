@@ -128,6 +128,7 @@ const EditProduct = () => {
                 className="form-control"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                required
               />
             </div>
 
@@ -151,6 +152,7 @@ const EditProduct = () => {
                     className="form-control"
                     value={stockQty}
                     onChange={(e) => setStockQty(parseInt(e.target.value))}
+                    required
                   />
                 </div>
               </div>
@@ -165,6 +167,7 @@ const EditProduct = () => {
                     onChange={(e) => {
                       setPrice(parseInt(e.target.value));
                     }}
+                    required
                   />
                 </div>
               </div>
@@ -177,6 +180,7 @@ const EditProduct = () => {
                     id="discount"
                     value={discountRate || 0}
                     onChange={(e) => setDiscountRate(parseInt(e.target.value))}
+                    required
                   />
                 </div>
               </div>
