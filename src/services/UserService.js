@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosApi = axios.create({
-  baseURL: "http://localhost:3001",
+  baseURL: "https://e-commerce-website-backend-livid.vercel.app",
   headers: {
     Authorization: `Bearer ${localStorage.getItem("token")}`,
     "Content-Type": "application/json",
