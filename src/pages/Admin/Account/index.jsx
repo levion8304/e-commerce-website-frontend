@@ -216,7 +216,7 @@ function Account() {
         }).then((res) => {
           if (res.isConfirmed) {
             axiosApi
-              .patch("/api/v1/admin/account/update", {
+              .patch("/api/v1/user/update", {
                 address: address,
               })
               .then((res) => {
@@ -265,7 +265,7 @@ function Account() {
         }).then((res) => {
           if (res.isConfirmed) {
             axiosApi
-              .patch("/api/v1/admin/account/update", {
+              .patch("/api/v1/user/update", {
                 password: CryptoJS.AES.encrypt(password, "secretkey"),
               })
               .then((res) => {
@@ -314,7 +314,7 @@ function Account() {
         }).then((res) => {
           if (res.isConfirmed) {
             axiosApi
-              .patch("/api/v1/admin/account/update", {
+              .patch("/api/v1/user/update", {
                 address: address,
               })
               .then((res) => {
