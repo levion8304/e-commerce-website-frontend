@@ -234,9 +234,9 @@ const DetailProduct = () => {
               </div>
 
               <div className="button-container mt-3">
-                <button className="btn" onClick={handlePurchaseNow}>
+{/*                 <button className="btn" onClick={handlePurchaseNow}>
                   Mua ngay
-                </button>
+                </button> */}
                 <button className="btn" onClick={handleAddToCart}>
                   Thêm vào giỏ hàng
                 </button>
